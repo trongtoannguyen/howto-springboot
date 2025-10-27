@@ -137,15 +137,25 @@
             background: #0077ed;
         }
 
-        .btn-balance {
-            background: #0071e3;
+        .btn {
+            padding: 10px 15px;
             color: white;
             border: none;
             border-radius: 8px;
-            font-size: 28px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #02386d;
+        }
+
+        .btn-primary {
+            background: #0071e3;
+            color: white;
+            border: none;
         }
 
         .product-info {
@@ -200,7 +210,7 @@
         </div>
         <div class="fund-new" th:unless="${balance}">
             <form action="/fund" method="get">
-                <button type="submit" class="btn-balance">Fund New Wallet</button>
+                <button type="submit" class="btn btn-primary">Fund New Wallet</button>
             </form>
         </div>
     </div>
@@ -219,10 +229,8 @@
             <label>
                 <input type="number" name="walletNumber" placeholder="Enter wallet number" required>
             </label>
-            <button type="submit" class="btn-balance">Check Balance</button>
+            <button type="submit" class="btn btn-primary">Check Balance</button>
         </form>
-        <div class="account-name" th:text="${accountName}">John Doe</div>
-        <div class="account-email" th:text="${accountEmail}">john@example.com</div>
     </div>
 </div>
 
@@ -232,37 +240,51 @@
     <div class="order-container">
         <h1 class="order-title">Order New iPhone</h1>
 
-        <div class="product-info">
-            <div class="product-name">iPhone 15 Pro Max</div>
-            <div class="product-price">$1,199</div>
-        </div>
+        <!--        <div class="product-info">-->
+        <!--            <div class="product-name" th:text="${prodName ?: 'Choose one'}"></div>-->
+        <!--            <div class="product-price" th:text="${prodPrice ?: '$0.00'}"></div>-->
+        <!--        </div>-->
 
-        <form action="/order" method="post">
+        <form id="order-form" th:action="@{/order}" method="post">
+            <!-- Product Selection -->
             <div class="form-group">
-                <label for="model">iPhone Model</label>
-                <select id="model" name="model" required>
-                    <option value="">Select Model</option>
-                    <option value="iphone-15-pro-max">iPhone 15 Pro Max</option>
-                    <option value="iphone-15-pro">iPhone 15 Pro</option>
-                    <option value="iphone-15-plus">iPhone 15 Plus</option>
-                    <option value="iphone-15">iPhone 15</option>
+                <label for="productSelected">Select Product:</label>
+                <select id="productSelected" name="productSelected" required>
+                    <option value="" disabled selected>-- Choose a product --</option>
+                    <option th:each="product : ${products}"
+                            th:value="${product}"
+                            th:text="${product.id + ' - ' + product.name + ' - $' + product.price}"
+                            th:attr="data-id=${product.id}, data-price=${product.price}">
+                    </option>
                 </select>
             </div>
 
+            <!-- Quantity -->
             <div class="form-group">
-                <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" required/>
             </div>
 
-            <!--            card info -->
+            <!-- Total Price Display -->
             <div class="form-group">
-                <label for="cardNumber">Card Number</label>
-                <input type="number" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
-                <label for="cvv">CVV</label>
-                <input type="number" id="cvv" name="cvv" placeholder="Enter your cvv" required>
+                <div class="price-display" id="totalPrice">Total: $0.00</div>
             </div>
 
-            <button type="submit" class="btn-order">Place Order</button>
+            <!-- Card Holder -->
+            <div class="form-group">
+                <label for="walletNumber">Wallet Number:</label>
+                <input type="text" id="walletNumber" name="walletNumber"
+                       placeholder="Enter e-wallet number" required/>
+            </div>
+
+            <!-- CVV -->
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv"
+                       placeholder="123" maxlength="4" required/>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-order">Place Order</button>
         </form>
     </div>
 </div>
@@ -271,5 +293,86 @@
 <div class="footer">
     with support of <a href="https://claude.ai" target="_blank">Claude</a> in UI building
 </div>
+<script>
+    // calculate total price
+    const selectedProductElement = document.getElementById('productSelected');
+    const totalPriceDiv = document.getElementById('totalPrice');
+    const quantityElement = document.getElementById('quantity');
+    const orderForm = document.getElementById('order-form');
+    let selectedProductId;
+    let price;
+    let quantity;
+    let total;
+    let walletNumber;
+    let cvv;
+
+    function setVariableOnchange() {
+        if (selectedProductElement.selectedIndex > 0) {
+            selectedProductId = selectedProductElement.options[selectedProductElement.selectedIndex].getAttribute('data-id');
+            price = selectedProductElement.options[selectedProductElement.selectedIndex].getAttribute('data-price');
+            quantity = quantityElement.value;
+            walletNumber = document.getElementById('walletNumber').value;
+            cvv = document.getElementById('cvv').value;
+            return true;
+        }
+        return false;
+    }
+
+    function calTotalPrice() {
+        if (setVariableOnchange()) {
+            total = (price * quantity).toFixed(3);
+            totalPriceDiv.innerHTML = 'Total: $' + total;
+        }
+    }
+
+
+    document.getElementById('order-form').onsubmit = function (e) {
+        e.preventDefault();
+        if (!setVariableOnchange()) {
+            console.error('No product selected');
+            return;
+        }
+
+        const payload = {
+            productId: selectedProductId,
+            quantity: quantity,
+            walletNumber: walletNumber,
+            cvv: cvv
+        };
+
+        console.log('Payload:', payload);
+
+        fetch('/order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Purchasing failed with status: ' + response.status);
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Success:', data);
+                alert(data);
+                window.setTimeout(
+                    function () {
+                        window.location.reload();
+                    }, 500
+                )
+            })
+            .catch(
+                error => {
+                    console.error('Error:', error);
+                    alert('Error placing order: ' + error.message);
+                }
+            );
+    }
+
+    orderForm.addEventListener('change', calTotalPrice);
+</script>
 </body>
 </html>

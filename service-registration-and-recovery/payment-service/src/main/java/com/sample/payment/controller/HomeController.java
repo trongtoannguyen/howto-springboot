@@ -2,8 +2,10 @@ package com.sample.payment.controller;
 
 import com.netflix.discovery.EurekaClient;
 import com.sample.common.PaymentRequest;
+import com.sample.common.PaymentResponse;
 import com.sample.payment.entity.Wallet;
 import com.sample.payment.repository.WalletRepository;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClient;
+
+import java.math.BigDecimal;
 
 @RestController
 public class HomeController {
@@ -47,7 +51,7 @@ public class HomeController {
     @GetMapping("/fund")
     public String fund() {
         Wallet wallet = new Wallet();
-        wallet.addBalance(10000);
+        wallet.addBalance(BigDecimal.valueOf(10000));
 
         // save into persistence layer
         walletRepository.save(wallet);
@@ -56,17 +60,44 @@ public class HomeController {
 
     // method to pay your order
     @PostMapping("/checkout")
-    public String checkout(@RequestBody PaymentRequest paymentRequest) {
-        //check wallet info
-        PaymentRequest.WalletInfo walletInfo = paymentRequest.getWalletInfo();
-        Wallet wallet = walletRepository.findByWalletNumberAndCvv(walletInfo.getWalletNumber(), walletInfo.getCvv()).orElseThrow();
-        if (wallet.getBalance().compareTo(paymentRequest.getAmount()) < 0) {
-            return "Insufficient balance.";
-        }
+    public PaymentResponse checkout(@Valid @RequestBody PaymentRequest paymentRequest) {
+        try {
+            //check wallet info
+            PaymentRequest.WalletInfo walletInfo = paymentRequest.getWalletInfo();
+            var walletOpt = walletRepository.findByWalletNumberAndCvv(walletInfo.getWalletNumber(), walletInfo.getCvv());
+            if (walletOpt.isEmpty()) {
+                return new PaymentResponse(
+                        "404",
+                        paymentRequest.getOrderId(),
+                        "Wallet not found."
+                );
+            }
 
-        // pay order
-        wallet.setBalance(wallet.getBalance().subtract(paymentRequest.getAmount()));
-        return "Order placed successfully.\n" + paymentRequest;
+            Wallet wallet = walletOpt.get();
+            if (wallet.getBalance().compareTo(paymentRequest.getAmount()) < 0) {
+                return new PaymentResponse(
+                        "402",
+                        paymentRequest.getOrderId(),
+                        "Insufficient balance."
+                );
+            }
+
+            // pay order
+            wallet.deductBalance(paymentRequest.getAmount());
+            walletRepository.save(wallet);
+            return new PaymentResponse(
+                    "200",
+                    paymentRequest.getOrderId(),
+                    "Payment successful."
+            );
+
+        } catch (Exception e) {
+            return new PaymentResponse(
+                    "500",
+                    paymentRequest.getOrderId(),
+                    "Payment processing failed: " + e.getMessage()
+            );
+        }
     }
 
     @GetMapping("/wallets")

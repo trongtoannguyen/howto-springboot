@@ -1,18 +1,17 @@
 package com.sample.order.entity;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.UUID;
 
 //represent an order
 public class Order {
     private String id;
-    private List<Item> items;
+    private Item item;
     private BigDecimal amount;
 
-    public Order(List<Item> items, BigDecimal amount) {
+    public Order(Item item, BigDecimal amount) {
         this.id = "OD_" + UUID.randomUUID();
-        this.items = items;
+        this.item = item;
         this.amount = amount;
     }
 
@@ -24,12 +23,12 @@ public class Order {
         this.id = id;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public Item getItem() {
+        return item;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
+    public void setItem(Item item) {
+        this.item = item;
     }
 
     public BigDecimal getAmount() {
@@ -44,7 +43,7 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "id='" + id + '\'' +
-                ", items=" + items +
+                ", item=" + item +
                 ", amount=" + amount +
                 '}';
     }
