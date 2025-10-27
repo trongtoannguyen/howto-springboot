@@ -67,8 +67,12 @@ public class Wallet {
         this.balance = balance;
     }
 
-    public void addBalance(double amount) {
-        this.balance = this.balance.add(BigDecimal.valueOf(amount));
+    public void deductBalance(BigDecimal amount) {
+        this.balance = this.balance.subtract(amount);
+    }
+
+    public void addBalance(BigDecimal amount) {
+        this.balance = this.balance.add(amount);
     }
 
     @Override

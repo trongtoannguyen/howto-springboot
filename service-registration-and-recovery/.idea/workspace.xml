@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sample/common/PaymentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/repository/WalletRepository.java" afterDir="false" />
+    <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sample/common/OrderRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sample/common/PaymentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/DbInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/entity/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/entity/Wallet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +33,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Spring Repository" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -95,7 +103,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reactor",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -105,6 +113,7 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sample.common" />
+      <recent name="com.sample.order.entity" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.sample.common" />
@@ -177,25 +186,39 @@
       <option name="presentableId" value="Default" />
       <updated>1761497698383</updated>
       <workItem from="1761497699474" duration="469000" />
-      <workItem from="1761498185982" duration="19808000" />
+      <workItem from="1761498185982" duration="42050000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
+      <option name="closed" value="true" />
+      <created>1761571761835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761571761835</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose" />
+    <MESSAGE value="add order service with product management and payment processing features and e-wallet support&#10;&#10;Refactored the project structure to follow a microservices design pattern and added simple e-wallet features. Changes include data model adjustments (e.g., Order, Item, Wallet), a new product system with H2 database support, and enhanced payment functionality. Updated the UI to support dynamic product selection and total price calculation." />
+    <option name="LAST_COMMIT_MESSAGE" value="add order service with product management and payment processing features and e-wallet support&#10;&#10;Refactored the project structure to follow a microservices design pattern and added simple e-wallet features. Changes include data model adjustments (e.g., Order, Item, Wallet), a new product system with H2 database support, and enhanced payment functionality. Updated the UI to support dynamic product selection and total price calculation." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/sample/order/controller/HomeController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="12" />
+          <line>65</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
