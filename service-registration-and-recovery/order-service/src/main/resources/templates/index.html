@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f7;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Balance (Top Left) */
+        .balance {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .balance-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .balance-amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1d1d1f;
+        }
+
+
+        /* Account Info (Top Right) */
+        .account-info {
+            text-align: right;
+        }
+
+        .new-wallet-info {
+            text-align: center;
+        }
+
+        .account-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        .account-email {
+            font-size: 13px;
+            color: #86868b;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+        }
+
+        /* Order Form (Center) */
+        .order-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1d1d1f;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #0071e3;
+        }
+
+        .btn-order {
+            width: 100%;
+            padding: 15px;
+            background: #0071e3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-order:hover {
+            background: #0077ed;
+        }
+
+        .btn-balance {
+            background: #0071e3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 28px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .product-info {
+            background: #f5f5f7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0071e3;
+            margin-top: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            color: #86868b;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #0071e3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<!-- Header with Balance and Account Info -->
+<div class="header">
+    <!-- Balance (Top Left) -->
+    <div class="balance">
+        <div th:if="${balance}">
+            <div class="balance-label">Your Balance</div>
+            <div class="balance-amount" th:text="${'$' + balance}">$0,000</div>
+        </div>
+        <div class="fund-new" th:unless="${balance}">
+            <form action="/fund" method="get">
+                <button type="submit" class="btn-balance">Fund New Wallet</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="new-wallet-info">
+        <div th:if="${walletInfo}" th:text="${walletInfo}">Fund to get new wallet</div>
+        <a th:unless="${walletInfo}" href="/">Home</a>
+    </div>
+
+    <!-- Account Info (Top Right) -->
+    <div class="account-info">
+        <div class="total-wallets">
+            Total Wallets: <p class="balance-label" th:text="${walletCount}">0</p>
+        </div>
+        <form action="/balance" method="get">
+            <label>
+                <input type="number" name="walletNumber" placeholder="Enter wallet number" required>
+            </label>
+            <button type="submit" class="btn-balance">Check Balance</button>
+        </form>
+        <div class="account-name" th:text="${accountName}">John Doe</div>
+        <div class="account-email" th:text="${accountEmail}">john@example.com</div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Order Form (Center) -->
+    <div class="order-container">
+        <h1 class="order-title">Order New iPhone</h1>
+
+        <div class="product-info">
+            <div class="product-name">iPhone 15 Pro Max</div>
+            <div class="product-price">$1,199</div>
+        </div>
+
+        <form action="/order" method="post">
+            <div class="form-group">
+                <label for="model">iPhone Model</label>
+                <select id="model" name="model" required>
+                    <option value="">Select Model</option>
+                    <option value="iphone-15-pro-max">iPhone 15 Pro Max</option>
+                    <option value="iphone-15-pro">iPhone 15 Pro</option>
+                    <option value="iphone-15-plus">iPhone 15 Plus</option>
+                    <option value="iphone-15">iPhone 15</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
+            </div>
+
+            <!--            card info -->
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="number" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="cvv" placeholder="Enter your cvv" required>
+            </div>
+
+            <button type="submit" class="btn-order">Place Order</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    with support of <a href="https://claude.ai" target="_blank">Claude</a> in UI building
+</div>
+</body>
+</html>
