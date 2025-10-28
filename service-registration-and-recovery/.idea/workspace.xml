@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sample/common/OrderRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/sample/common/PaymentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/DbInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sample/order/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/entity/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/entity/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +34,16 @@
     &quot;assignee&quot;: &quot;trongtoannguyen&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/trongtoannguyen/demo-service-registration-and-recovery.git&quot;,
-    &quot;accountId&quot;: &quot;98747abd-d84b-4241-b430-23bb1dd7c2dd&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/trongtoannguyen/howto-springboot.git",
+    "accountId": "98747abd-d84b-4241-b430-23bb1dd7c2dd"
   }
-}</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
 }]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -93,7 +79,7 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_directory_selection": "/Users/nguyentrongtoan/development/how-to/service-registration-and-recovery/common/src/main/java/com/sample/common",
-    "last_opened_file_path": "/Users/nguyentrongtoan/development/how-to/service-registration-and-recovery",
+    "last_opened_file_path": "/Users/nguyentrongtoan/development/howto-springboot/service-registration-and-recovery",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -187,6 +173,7 @@
       <updated>1761497698383</updated>
       <workItem from="1761497699474" duration="469000" />
       <workItem from="1761498185982" duration="42050000" />
+      <workItem from="1761639891258" duration="1339000" />
     </task>
     <task id="LOCAL-00001" summary="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
       <option name="closed" value="true" />
@@ -210,11 +197,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/payment-service/src/main/java/com/sample/payment/controller/HomeController.java</url>
           <line>65</line>

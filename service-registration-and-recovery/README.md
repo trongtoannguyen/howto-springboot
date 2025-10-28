@@ -20,3 +20,15 @@ service trong hệ thống.
    registry.
 2. Tìm kiếm thông tin các dịch vụ đang hoạt động trong hệ thống, ví dụ khi Order-service muốn gọi đến Payment-service nó
    sẽ hỏi Service Registry "Payment đang ở đâu?"
+
+## How to run
+
+1. Make sure required tools for Spring Boot running are installed on your machine.
+2. Clone repository
+
+```bash
+$ git clone https://github.com/trongtoannguyen/howto-springboot.git
+```
+
+3. Open project in an IDE (IntelliJ is recommended)
+4. Just run the app and navigate to [localhost:8761](http://localhost:8761) to see Eureka Service Registry dashboard.
