@@ -20,12 +20,6 @@ public class HaloWorldApplication {
         SpringApplication.run(HaloWorldApplication.class, args);
     }
 
-    @GetMapping
-    public String home(){
-        log.info("Access /");
-        return "Halo";
-    }
-
     @GetMapping("/greeting")
     public String greet() {
         log.info("Access /greeting");
@@ -33,6 +27,12 @@ public class HaloWorldApplication {
         Random random = new Random();
         var randNum = random.nextInt(greetings.size());
         return greetings.get(randNum);
+    }
+
+    @GetMapping
+    public String home(){
+        log.info("Access /");
+        return "Halo";
     }
 
 }

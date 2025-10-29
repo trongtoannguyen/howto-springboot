@@ -4,27 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="init Spring loadbalancer prj">
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="init wallet project to build with repo-mentioned technologies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="module" />
-      <option value="repository" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
     </option>
   </component>
   <component name="Git.Settings">
@@ -45,6 +35,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-21.0.8/Contents/Home/lib/src.zip!/java.base/java/util/Random.java" root0="SKIP_INSPECTION" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -54,23 +48,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.HaloWorldApplication.executor": "Debug",
+    "Spring Boot.UserApplication.executor": "Debug",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/nguyentrongtoan/development/howto-springboot/cloud-loadbalancer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sample.haloworld" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sample.user.hello" />
+      <recent name="com.sample.user" />
+      <recent name="com.sample.haloworld" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.HaloWorldApplication">
     <configuration name="HaloWorldApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="halo-world" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sample.haloworld.HaloWorldApplication" />
@@ -86,6 +115,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.HaloWorldApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -103,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761662297436</updated>
       <workItem from="1761662298426" duration="3145000" />
-      <workItem from="1761727188179" duration="3185000" />
+      <workItem from="1761727188179" duration="12021000" />
     </task>
     <task id="LOCAL-00001" summary="init Spring loadbalancer prj">
       <option name="closed" value="true" />
@@ -113,7 +146,31 @@
       <option name="project" value="LOCAL" />
       <updated>1761728324824</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement halo controller and deconflict port with running client">
+      <option name="closed" value="true" />
+      <created>1761730842582</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761730842582</updated>
+    </task>
+    <task id="LOCAL-00003" summary="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose">
+      <option name="closed" value="true" />
+      <created>1761740561019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761740561019</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init wallet project to build with repo-mentioned technologies">
+      <option name="closed" value="true" />
+      <created>1761740631427</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761740631427</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +178,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init Spring loadbalancer prj" />
-    <option name="LAST_COMMIT_MESSAGE" value="init Spring loadbalancer prj" />
+    <MESSAGE value="Implement the &quot;Halo world&quot; controller" />
+    <MESSAGE value="implement halo controller and deconflict port with running client" />
+    <MESSAGE value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
+    <MESSAGE value="init wallet project to build with repo-mentioned technologies" />
+    <option name="LAST_COMMIT_MESSAGE" value="init wallet project to build with repo-mentioned technologies" />
   </component>
 </project>
