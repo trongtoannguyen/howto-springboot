@@ -4,17 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
+    <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="add Readme.md">
+      <change afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/hello/HaloWorldConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/hello/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -34,12 +46,12 @@
     &quot;assignee&quot;: &quot;trongtoannguyen&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/trongtoannguyen/howto-springboot.git",
-    "accountId": "98747abd-d84b-4241-b430-23bb1dd7c2dd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/trongtoannguyen/howto-springboot.git&quot;,
+    &quot;accountId&quot;: &quot;98747abd-d84b-4241-b430-23bb1dd7c2dd&quot;
   }
-}]]></component>
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -60,39 +72,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CommonApplication.executor": "Debug",
-    "Spring Boot.EurekaServerApplication.executor": "Debug",
-    "Spring Boot.OrderServiceApplication.executor": "Debug",
-    "Spring Boot.PaymentServiceApplication.executor": "Debug",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_directory_selection": "/Users/nguyentrongtoan/development/how-to/service-registration-and-recovery/common/src/main/java/com/sample/common",
-    "last_opened_file_path": "/Users/nguyentrongtoan/development/howto-springboot/service-registration-and-recovery",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CommonApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.PaymentServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/nguyentrongtoan/development/how-to/service-registration-and-recovery/common/src/main/java/com/sample/common&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nguyentrongtoan/development/howto-springboot/service-registration-and-recovery&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -113,17 +125,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CommonApplication">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="service-registration-and-recovery" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="service-registration-and-recovery" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="common" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sample.common.CommonApplication" />
@@ -173,7 +174,9 @@
       <updated>1761497698383</updated>
       <workItem from="1761497699474" duration="469000" />
       <workItem from="1761498185982" duration="42050000" />
-      <workItem from="1761639891258" duration="1339000" />
+      <workItem from="1761639891258" duration="2039000" />
+      <workItem from="1761661307696" duration="178000" />
+      <workItem from="1761735695121" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
       <option name="closed" value="true" />
@@ -183,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761571761835</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add Readme.md">
+      <option name="closed" value="true" />
+      <created>1761642386328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761642386328</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +203,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose" />
     <MESSAGE value="add order service with product management and payment processing features and e-wallet support&#10;&#10;Refactored the project structure to follow a microservices design pattern and added simple e-wallet features. Changes include data model adjustments (e.g., Order, Item, Wallet), a new product system with H2 database support, and enhanced payment functionality. Updated the UI to support dynamic product selection and total price calculation." />
-    <option name="LAST_COMMIT_MESSAGE" value="add order service with product management and payment processing features and e-wallet support&#10;&#10;Refactored the project structure to follow a microservices design pattern and added simple e-wallet features. Changes include data model adjustments (e.g., Order, Item, Wallet), a new product system with H2 database support, and enhanced payment functionality. Updated the UI to support dynamic product selection and total price calculation." />
+    <MESSAGE value="add Readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
