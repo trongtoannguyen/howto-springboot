@@ -11,6 +11,7 @@ import reactor.core.publisher.Flux;
 import java.util.Arrays;
 import java.util.List;
 
+// This class is hard-coded, in production, you would use a proper service registry .e.g. Eureka, Consul, etc.
 @Configuration
 public class HaloWorldConfiguration {
 
@@ -33,6 +34,9 @@ public class HaloWorldConfiguration {
             return serviceId;
         }
 
+        // method is hard-coded to return 3 instances.
+        // in production, your company normally uses a service registry, which holds all instances info including information
+        // that helps load balancer to choose an effective instance (e.g., health status, zone/region, etc.)
         @Override
         public Flux<List<ServiceInstance>> get() {
             return Flux.just(Arrays.asList(

@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="init wallet project to build with repo-mentioned technologies">
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/client/HaloWorldClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/client/HaloWorldClientImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/HaloWorldClientProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/controller/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/service/GreetingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/service/GreetingServiceImpl.java" afterDir="false" />
+    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="refactor to achieve loose coupling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/hello/HaloWorldConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/HaloWorldConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/hello/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/HaloWorldConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/HaloWorldConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761662297436</updated>
       <workItem from="1761662298426" duration="3145000" />
-      <workItem from="1761727188179" duration="19022000" />
+      <workItem from="1761727188179" duration="20410000" />
     </task>
     <task id="LOCAL-00001" summary="init Spring loadbalancer prj">
       <option name="closed" value="true" />
@@ -204,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761740752925</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor to achieve loose coupling">
+      <option name="closed" value="true" />
+      <created>1761747738096</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761747738096</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +226,8 @@
     <MESSAGE value="implement halo controller and deconflict port with running client" />
     <MESSAGE value="init wallet project to build with repo-mentioned technologies" />
     <MESSAGE value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
+    <MESSAGE value="refactor to achieve loose coupling" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor to achieve loose coupling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
