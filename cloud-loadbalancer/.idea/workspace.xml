@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="init Spring loadbalancer prj">
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -15,6 +20,12 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="module" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -31,6 +42,9 @@
     &quot;accountId&quot;: &quot;98747abd-d84b-4241-b430-23bb1dd7c2dd&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-21.0.8/Contents/Home/lib/src.zip!/java.base/java/util/Random.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -89,11 +103,24 @@
       <option name="presentableId" value="Default" />
       <updated>1761662297436</updated>
       <workItem from="1761662298426" duration="3145000" />
-      <workItem from="1761727188179" duration="795000" />
+      <workItem from="1761727188179" duration="3185000" />
     </task>
+    <task id="LOCAL-00001" summary="init Spring loadbalancer prj">
+      <option name="closed" value="true" />
+      <created>1761728324824</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761728324824</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init Spring loadbalancer prj" />
+    <option name="LAST_COMMIT_MESSAGE" value="init Spring loadbalancer prj" />
   </component>
 </project>
