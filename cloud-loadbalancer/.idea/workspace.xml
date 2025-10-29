@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="init wallet project to build with repo-mentioned technologies" />
+    <list default="true" id="c5ca0bca-c677-4ff7-a544-c9e9d43bd3fe" name="Changes" comment="init wallet project to build with repo-mentioned technologies">
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/client/HaloWorldClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/client/HaloWorldClientImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/HaloWorldClientProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/controller/GreetingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/service/GreetingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/service/GreetingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/hello/HaloWorldConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/HaloWorldConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/sample/user/hello/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/sample/user/config/WebClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +25,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -26,6 +39,16 @@
     &quot;assignee&quot;: &quot;trongtoannguyen&quot;
   }
 }</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
+        <option name="rewordedMessage" value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="f472eab863399be9e7b0eda362b0862e93241d07" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/trongtoannguyen/howto-springboot.git&quot;,
@@ -35,10 +58,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/temurin-21.0.8/Contents/Home/lib/src.zip!/java.base/java/util/Random.java" root0="SKIP_INSPECTION" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -81,6 +104,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sample.user.config" />
+      <recent name="com.sample.user.client" />
+      <recent name="com.sample.user.service" />
       <recent name="com.sample.haloworld" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -136,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761662297436</updated>
       <workItem from="1761662298426" duration="3145000" />
-      <workItem from="1761727188179" duration="12021000" />
+      <workItem from="1761727188179" duration="19022000" />
     </task>
     <task id="LOCAL-00001" summary="init Spring loadbalancer prj">
       <option name="closed" value="true" />
@@ -170,18 +196,53 @@
       <option name="project" value="LOCAL" />
       <updated>1761740631427</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init wallet project to build with repo-mentioned technologies">
+      <option name="closed" value="true" />
+      <created>1761740752925</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761740752925</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init Spring loadbalancer prj" />
     <MESSAGE value="Implement the &quot;Halo world&quot; controller" />
     <MESSAGE value="implement halo controller and deconflict port with running client" />
-    <MESSAGE value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
     <MESSAGE value="init wallet project to build with repo-mentioned technologies" />
-    <option name="LAST_COMMIT_MESSAGE" value="init wallet project to build with repo-mentioned technologies" />
+    <MESSAGE value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement HaloWorld microservice and simulated instance with load balancing and add basic endpoints for testing purpose" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/sample/user/config/WebClientConfig.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user/src/main/java/com/sample/user/config/WebClientConfig.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

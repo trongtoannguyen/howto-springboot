@@ -1,4 +1,4 @@
-package com.sample.user.hello;
+package com.sample.user.config;
 
 import org.springframework.cloud.client.DefaultServiceInstance;
 import org.springframework.cloud.client.ServiceInstance;
@@ -16,8 +16,8 @@ public class HaloWorldConfiguration {
 
     @Bean
     @Primary
-    ServiceInstanceListSupplier serviceInstanceListSupplier() {
-        return new DemoServiceInstanceListSupplier("halo-world");
+    ServiceInstanceListSupplier serviceInstanceListSupplier(HaloWorldClientProperties properties) {
+        return new DemoServiceInstanceListSupplier(properties.getServiceId());
     }
 
     static class DemoServiceInstanceListSupplier implements ServiceInstanceListSupplier {
@@ -36,7 +36,7 @@ public class HaloWorldConfiguration {
         @Override
         public Flux<List<ServiceInstance>> get() {
             return Flux.just(Arrays.asList(
-                    new DefaultServiceInstance("real" + serviceId + "1", serviceId, "localhost", 8090, false),
+                    new DefaultServiceInstance("real-" + serviceId + "1", serviceId, "localhost", 8090, false),
                     new DefaultServiceInstance(serviceId + "2", serviceId, "localhost", 9092, false),
                     new DefaultServiceInstance(serviceId + "3", serviceId, "localhost", 9999, false)));
         }
