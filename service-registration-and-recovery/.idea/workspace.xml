@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="add Readme.md">
-      <change afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/hello/HaloWorldConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/hello/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/copilot.data.migration.edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-wallet/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/halo-world/src/main/java/com/sample/haloworld/HaloWorldApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/java/com/sample/user/UserApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/user/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/copilot.data.migration.agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +45,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="GJGISRTI" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -122,6 +114,19 @@
       <set>
         <option value="SpringBootApplicationConfigurationType" />
       </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="EurekaServerApplication" value="STOPPED" />
+              <entry key="OrderServiceApplication" value="STOPPED" />
+              <entry key="PaymentServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CommonApplication">
@@ -199,6 +204,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose" />
