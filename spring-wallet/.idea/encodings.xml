@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../service-registration-and-recovery/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../service-registration-and-recovery/eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../service-registration-and-recovery/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../service-registration-and-recovery/payment-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../service-registration-and-recovery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../service-registration-and-recovery/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
