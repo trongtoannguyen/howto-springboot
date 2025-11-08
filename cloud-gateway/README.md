@@ -1,7 +1,9 @@
 # Preface
 
+Dependencies: Reactive Gateway, Resilience4J, and Contract Stub Runner.
+
 In this guide, we route all of our requests to HTTPBin.
-If Httpbin server is unavailable, you can run a local instance by following the instructions with Docker:
+If Httpbin server is unavailable, you can run a local instance by following the instructions with Docker
 
 ## Run httpbin locally
 
