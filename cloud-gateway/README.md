@@ -77,3 +77,26 @@ log requests and responses, monitor performance metrics, etc.
 
 - Kong: the most popular open-source API Gateway.
 - AWS API Gateway: a fully managed service from Amazon Web Services.
+
+
+## Websocket Sample
+
+[install wscat](https://www.npmjs.com/package/wscat)
+
+In one terminal, run websocket server:
+```
+wscat --listen 9000
+``` 
+
+In another, run a client, connecting through gateway:
+```
+wscat --connect ws://localhost:8080/echo
+```
+
+type away in either server and client, messages will be passed appropriately.
+
+## Running Redis Rate Limiter Test
+
+Make sure redis is running on localhost:6379 (using brew or apt or docker).
+
+Then run `DemogatewayApplicationTests`. It should pass which means one of the calls received a 429 TO_MANY_REQUESTS HTTP status.
