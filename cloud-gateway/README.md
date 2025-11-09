@@ -87,6 +87,8 @@ log requests and responses, monitor performance metrics, etc.
 
 ## Websocket Sample
 
+- Recommend running and testing on a Linux or macOS system for simple setup.
+
 [install wscat](https://www.npmjs.com/package/wscat)
 
 In one terminal, run websocket server:

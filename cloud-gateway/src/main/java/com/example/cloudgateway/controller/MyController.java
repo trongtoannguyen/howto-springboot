@@ -13,8 +13,8 @@ public class MyController {
         return Mono.just("fallback");
     }
 
-    @GetMapping ("/circuitbreakerfallback")
+    @GetMapping ("/circuitbreaker-fallback")
     public Mono<String> circuitbreakerfallback() {
-        return Mono.just("circuitbreakerfallback");
+        return Mono.just("call me a callback");
     }
 }
