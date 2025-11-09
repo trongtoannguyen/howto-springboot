@@ -12,8 +12,10 @@ public class CustomRoutes {
 
     @Bean
     RouteLocator customRouteLocator(RouteLocatorBuilder builder, UriConfiguration uriConfiguration) {
-
+        //@formatter:off
         String uri = uriConfiguration.getHttpbin();
+        String ws = uriConfiguration.getWs();
+
         return builder.routes()
                 .route("path_route", r -> r.order(9999).path("/get")
                         .filters(p -> p.addResponseHeader("X-Response-Default-Foo", "Default-Bar"))
@@ -43,10 +45,17 @@ public class CustomRoutes {
                         .filters(f -> f.requestRateLimiter(config -> config.setRateLimiter(redisRateLimiter())))
                         .uri(uri))
 
+                .route("websocket_route", r -> r.path("/echo")
+                        .filters(f -> f.addResponseHeader("X-WebSocket", "Enabled"))
+                        .uri(ws))
 
                 .build();
+        //@formatter:on
     }
 
+    /**
+     * Rate limiter bean mục đích giới hạn lưu lượng thực hiện request tới services
+     */
     @Bean
     public RedisRateLimiter redisRateLimiter() {
         return new RedisRateLimiter(1, 2);
