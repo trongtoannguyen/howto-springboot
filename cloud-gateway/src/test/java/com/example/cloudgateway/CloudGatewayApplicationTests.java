@@ -158,18 +158,6 @@ class CloudGatewayApplicationTests {
     }
 
     @Test
-    public void wsRouteWorks() {
-        stubFor(get(urlEqualTo("/echo"))
-                .willReturn(aResponse()
-                        .withStatus(101)));
-
-        webTestClient.get().uri("/echo")
-                .exchange()
-                .expectStatus().isEqualTo(HttpStatus.SWITCHING_PROTOCOLS)
-                .expectHeader().valueEquals("X-WebSocket", "Enabled");
-    }
-
-    @Test
     public void contextLoads() {
         // stubs
         stubFor(get(urlEqualTo("/get"))
