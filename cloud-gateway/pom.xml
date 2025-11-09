@@ -130,6 +130,11 @@
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <args>
+                        <arg>-Xmulti-dollar-interpolation</arg>
+                    </args>
+                </configuration>
             </plugin>
         </plugins>
     </build>
