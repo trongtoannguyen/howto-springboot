@@ -7,6 +7,7 @@ If Httpbin server is unavailable, you can run a local instance by following the 
 
 ## Run httpbin locally
 
+To run locally, comment httpbin.uri in `application.properties` then:
 1. Ensure you have Docker installed on your machine.
 2. Run the following command to pull and start the Httpbin Docker container:
 
@@ -15,7 +16,25 @@ docker run -p 80:80 kennethreitz/httpbin
 ```
 
 1. Access Httpbin at `http://localhost:80`.
-2. Modify the base URL in the configuration class.
+2. Test methods with the following bash commands:
+```shell
+curl.exe -D - 'http://localhost:8080/get'
+```
+```shell
+curl.exe -D - -H 'Host: www.circuitbreaker.com' http://localhost:8080/delay/3
+```
+```shell
+curl.exe -D - -H 'Host: www.abc.org' http://localhost:8080/hola
+```
+```shell
+curl.exe -D - -H 'Host: www.abc.org' http://localhost:8080/anything/png
+```
+```shell
+curl.exe -X POST -D - -H 'Host: www.statuscode.org' -d 'code' http://localhost:8080/200
+```
+```shell
+curl.exe -D - -H "Host: www.rewriteresponseupper.org" http://localhost:8080/xml
+```
 
 ## Gateway
 

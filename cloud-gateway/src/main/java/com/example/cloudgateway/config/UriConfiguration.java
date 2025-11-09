@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "uri")
 public class UriConfiguration {
 
-    @Value("${httpbin:http://localhost:80}")
+    @Value("${httpbin:http://httpbin.org:80}")
     private String httpbin;
 
     public String getHttpbin() {
