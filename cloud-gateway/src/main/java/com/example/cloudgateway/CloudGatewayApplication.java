@@ -8,11 +8,18 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.core.userdetails.MapReactiveUserDetailsService;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.server.SecurityWebFilterChain;
 import reactor.core.publisher.Mono;
 
 import java.util.Locale;
 
 @SpringBootApplication
+@EnableWebFluxSecurity
 @EnableConfigurationProperties(UriConfiguration.class)
 public class CloudGatewayApplication {
 
@@ -33,7 +40,7 @@ public class CloudGatewayApplication {
         return builder.routes()
 
                 // $ curl --dump-header - http://localhost:8080/get
-                .route(p -> p
+                .route(p -> p.order(10000)
                         .path("/get")
                         .filters(f -> f.addRequestHeader("Hello", "World"))
                         .uri(httpUri))
@@ -80,6 +87,23 @@ public class CloudGatewayApplication {
     }
     // end::route-locator[]
 
-    public record Hello(String message) {
+    @Bean
+    SecurityWebFilterChain filterChain(ServerHttpSecurity http) {
+        return http
+                .csrf(ServerHttpSecurity.CsrfSpec::disable)
+                .authorizeExchange(authorizeExchangeSpec -> authorizeExchangeSpec
+                        .pathMatchers("/anything/**").authenticated()
+                        .anyExchange().permitAll())
+                .build();
+    }
+
+    @Bean
+    public MapReactiveUserDetailsService reactiveUserDetailsService() {
+        UserDetails user = User
+                .withUsername("user")
+                .password("{noop}password") // {noop} indicates that no encoding is used
+                .roles("USER")
+                .build();
+        return new MapReactiveUserDetailsService(user);
     }
 }
