@@ -101,7 +101,7 @@ public class CloudGatewayApplication {
     public MapReactiveUserDetailsService reactiveUserDetailsService() {
         UserDetails user = User
                 .withUsername("user")
-                .password("{noop}password") // {noop} indicates that no encoding is used
+                .password("{noop}password") // {noop} indicates no encoding
                 .roles("USER")
                 .build();
         return new MapReactiveUserDetailsService(user);

@@ -8,6 +8,7 @@ If Httpbin server is unavailable, you can run a local instance by following the 
 ## Run httpbin locally
 
 To run locally, comment httpbin.uri in `application.properties` then:
+
 1. Ensure you have Docker installed on your machine.
 2. Run the following command to pull and start the Httpbin Docker container:
 
@@ -17,21 +18,27 @@ docker run -p 80:80 kennethreitz/httpbin
 
 1. Access Httpbin at `http://localhost:80`.
 2. Test methods with the following bash commands:
+
 ```shell
 curl.exe -D - 'http://localhost:8080/get'
 ```
+
 ```shell
 curl.exe -D - -H 'Host: www.circuitbreaker.com' http://localhost:8080/delay/3
 ```
+
 ```shell
 curl.exe -D - -H 'Host: www.abc.org' http://localhost:8080/hola
 ```
+
 ```shell
 curl.exe -D - -H 'Host: www.abc.org' http://localhost:8080/anything/png
 ```
+
 ```shell
 curl.exe -X POST -D - -H 'Host: www.statuscode.org' -d 'code' http://localhost:8080/200
 ```
+
 ```shell
 curl.exe -D - -H "Host: www.rewriteresponseupper.org" http://localhost:8080/xml
 ```
@@ -78,18 +85,21 @@ log requests and responses, monitor performance metrics, etc.
 - Kong: the most popular open-source API Gateway.
 - AWS API Gateway: a fully managed service from Amazon Web Services.
 
-
 ## Websocket Sample
+
+- Recommend running and testing on a Linux or macOS system for simple setup.
 
 [install wscat](https://www.npmjs.com/package/wscat)
 
 In one terminal, run websocket server:
-```
+
+```shell
 wscat --listen 9000
 ``` 
 
 In another, run a client, connecting through gateway:
-```
+
+```shell
 wscat --connect ws://localhost:8080/echo
 ```
 
@@ -99,4 +109,5 @@ type away in either server and client, messages will be passed appropriately.
 
 Make sure redis is running on localhost:6379 (using brew or apt or docker).
 
-Then run `DemogatewayApplicationTests`. It should pass which means one of the calls received a 429 TO_MANY_REQUESTS HTTP status.
+Then run `DemogatewayApplicationTests`. It should pass which means one of the calls received a 429 TO_MANY_REQUESTS HTTP
+status.
