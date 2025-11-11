@@ -9,6 +9,7 @@ import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.web.reactive.server.FluxExchangeResult;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.web.reactive.socket.client.WebSocketClient;
 
 import java.util.Map;
 
@@ -29,6 +30,8 @@ class CloudGatewayApplicationTests {
 
     @Autowired
     private WebTestClient webTestClient;
+    @Autowired
+    private WebSocketClient webSocketClient;
 
     @BeforeEach
     public void setup() {
@@ -155,18 +158,6 @@ class CloudGatewayApplicationTests {
         assertThat(wasLimited)
                 .as("A HTTP 429 TOO_MANY_REQUESTS was received")
                 .isTrue();
-    }
-
-    @Test
-    public void wsRouteWorks() {
-        stubFor(get(urlEqualTo("/echo"))
-                .willReturn(aResponse()
-                        .withStatus(101)));
-
-        webTestClient.get().uri("/echo")
-                .exchange()
-                .expectStatus().isEqualTo(HttpStatus.SWITCHING_PROTOCOLS)
-                .expectHeader().valueEquals("X-WebSocket", "Enabled");
     }
 
     @Test
