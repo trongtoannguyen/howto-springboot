@@ -109,5 +109,6 @@ type away in either server and client, messages will be passed appropriately.
 
 Make sure redis is running on localhost:6379 (using brew or apt or docker).
 
-Then run `DemogatewayApplicationTests`. It should pass which means one of the calls received a 429 TO_MANY_REQUESTS HTTP
+Then run `DemogatewayApplicationTests`.
+It should pass, which means one of the calls received a 429 TO_MANY_REQUESTS HTTP
 status.
