@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.reactive.server.FluxExchangeResult;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.web.reactive.socket.client.WebSocketClient;
 
 import java.util.Map;
 
@@ -29,6 +30,8 @@ class CloudGatewayApplicationTests {
 
     @Autowired
     private WebTestClient webTestClient;
+    @Autowired
+    private WebSocketClient webSocketClient;
 
     @BeforeEach
     public void setup() {
