@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.reactive.server.FluxExchangeResult;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.web.reactive.socket.client.WebSocketClient;
@@ -18,7 +19,6 @@ import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.web.reactive.function.client.ExchangeFilterFunctions.basicAuthentication;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         properties = {"uri.httpbin=http://localhost:${wiremock.server.port}"})
@@ -128,15 +128,26 @@ class CloudGatewayApplicationTests {
     }
 
     @Test
+    @WithMockUser(roles = "ADMIN")
     public void rateLimiterWorks() {
         stubFor(get(urlEqualTo("/anything/redis"))
                 .willReturn(aResponse()
                         .withStatus(200)
-                        .withBody("{\"result\":\"success\"}")));
+                        .withBody("{\"result\":\"success\"}")
+                        .withHeader("Content-Type", "application/json")));
 
         var authClient = webTestClient.mutate()
-                .filter(basicAuthentication("user", "password"))
+//                .filter(basicAuthentication("admin", "admin"))
                 .build();
+
+        authClient.get().uri("/anything/redis")
+                .header("Host", "www.limited.org")
+                .exchange()
+                .expectStatus().isOk()
+                .expectHeader().valueEquals("X-RateLimiter", "Applied")
+                .expectBody()
+                .jsonPath("$.result").isEqualTo("success");
+
         boolean wasLimited = false;
 
         for (int i = 0; i < 20; i++) {
