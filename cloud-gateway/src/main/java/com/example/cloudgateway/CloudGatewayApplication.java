@@ -92,16 +92,17 @@ public class CloudGatewayApplication {
         return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
                 .authorizeExchange(authorizeExchangeSpec -> authorizeExchangeSpec
-                        .pathMatchers("/anything/**").authenticated()
+                        .pathMatchers("/anything/**").hasRole("ADMIN")
                         .anyExchange().permitAll())
                 .build();
     }
 
+    // We use Mock User annotation in Test so do not need to create this bean
     @Bean
     public MapReactiveUserDetailsService reactiveUserDetailsService() {
         UserDetails user = User
                 .withUsername("user")
-                .password("{noop}password") // {noop} indicates no encoding
+                .password("password")
                 .roles("USER")
                 .build();
         return new MapReactiveUserDetailsService(user);
