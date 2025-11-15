@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d6ff84b-bb0a-4251-90c5-f82da627909a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reading/src/main/java/example/circuitbreaker/reading/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reading/src/main/java/example/circuitbreaker/reading/UriConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/copilot.data.migration.ask.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reading/src/main/java/example/circuitbreaker/reading/ReadingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reading/src/main/java/example/circuitbreaker/reading/ReadingApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reading/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reading/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-loadbalancer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../service-registration-and-recovery/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +21,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "trongtoannguyen"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/trongtoannguyen/howto-springboot.git",
+    "accountId": "98747abd-d84b-4241-b430-23bb1dd7c2dd"
+  }
+}]]></component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
@@ -46,11 +66,12 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/trong/development/howto-springboot/cloud-circuitbreaker",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -85,6 +106,7 @@
       <updated>1762849067858</updated>
       <workItem from="1762849069003" duration="1566000" />
       <workItem from="1762850829018" duration="107000" />
+      <workItem from="1763139308123" duration="20000" />
     </task>
     <servers />
   </component>
