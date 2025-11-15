@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e104cdbf-7351-4f20-868e-39100836bed3" name="Changes" comment="add Readme.md">
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-circuitbreaker/reading/src/main/java/example/circuitbreaker/reading/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cloud-circuitbreaker/reading/src/main/java/example/circuitbreaker/reading/UriConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cloud-circuitbreaker/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../cloud-circuitbreaker/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,7 @@
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/nguyentrongtoan/development/how-to/service-registration-and-recovery/common/src/main/java/com/sample/common",
     "last_opened_file_path": "/Users/nguyentrongtoan/development/howto-springboot/service-registration-and-recovery",
     "node.js.detected.package.eslint": "true",
@@ -191,6 +192,7 @@
       <workItem from="1761661307696" duration="178000" />
       <workItem from="1761735695121" duration="70000" />
       <workItem from="1762199631775" duration="800000" />
+      <workItem from="1762859951340" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="refactor to implement the microservices pattern and implement simple e-wallet functions for demonstrating purpose">
       <option name="closed" value="true" />
